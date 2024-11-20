@@ -1,55 +1,104 @@
 body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .calculator {
-    background: rgb(145, 144, 144);
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    padding: 80px 30px;
-  }
-  
-  #display {
+    background-color: #f4f4f4;
+}
+
+
+.calculator {
     width: 100%;
-    height: 40px;
-    font-size: 24px;
+    max-width: 380px;
+    background-color: #bdbdbd;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    background-color: #2f80ed;
+    color: white;
+    font-size: 22px;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 15px;
     text-align: right;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+.zero{
     border-radius: 5px;
-  }
-  
-  .buttons {
+}
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  button {
+    gap: 15px;
+}
+
+button {
+    font-size: 28px;
     padding: 20px;
-    font-size: 18px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
     border: none;
-    border-radius: 10px;
-    background-color: #3d58f3;
-    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-  }
-  .react{
-    background-color: rgb(3, 80, 76);
-  }
-  .zero{
-    background-color: rgb(174, 204, 186);
-  }
-  .zero:hover{
-    background-color: #222121;
-    color: #ccc;
-  }
-  button:hover {
-    background-color: #000000;
-    color: #f0f0f0;
-  }
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #d0d0d0;
+    transform: translateY(2px);
+}
+
+button.react {
+    background-color: #2f80ed;
+    color: white;
+}
+
+button.react:hover {
+    background-color: #2670b7;
+}
+
+button.react:active {
+    background-color: #1f60a3;
+}
+
+button.zero {
+    grid-column: span 2;
+}
+
+button.clear {
+    background-color: #f76c6c;
+    color: white;
+}
+
+button.clear:hover {
+    background-color: #f14545;
+}
+
+button.clear:active {
+    background-color: #e63a3a;
+}
